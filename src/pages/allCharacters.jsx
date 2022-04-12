@@ -5,7 +5,6 @@ import { fetchAllCharacters } from '../slices/characters/all';
 const allCharacters = () => {
   const { allCharacters } = useSelector((state) => state.allCharacters);
   const dispatch = useDispatch();
-  console.log(allCharacters);
 
   useEffect(() => {
     dispatch(fetchAllCharacters());
