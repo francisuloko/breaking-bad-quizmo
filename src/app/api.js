@@ -6,7 +6,6 @@ const breakingBadAPI = axios.create({
     'Content-Type': 'application/json',
     'Access-Control-Allow-Origin': '*',
   },
-  withCredentials: true,
 });
 
 export default breakingBadAPI;
