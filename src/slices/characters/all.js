@@ -19,7 +19,7 @@ const initialState = {
 };
 
 const userSlice = createSlice({
-  name: 'allCcharacters',
+  name: 'allCharacters',
   initialState,
   extraReducers: {
     [fetchAllCharacters.fulfilled]: (state, action) => {

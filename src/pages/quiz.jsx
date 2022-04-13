@@ -7,9 +7,8 @@ import RandomCharacter from '../app/random';
 import { fetchAllCharacters } from '../slices/characters/all';
 
 const Quiz = () => {
+  const allCharacters = JSON.parse(localStorage.getItem('breakingBadCharacters'));
   const dispatch = useDispatch();
-  const { allCharacters } = useSelector((state) => state.allCharacters);
-
   const random = RandomCharacter(allCharacters);
   const [options, setOptions] = useState([random(), random(), random()]);
   const [character, setChar] = useState(options[Math.floor(Math.random() * 3)]);
