@@ -7,44 +7,35 @@ const Quiz = () => {
   const dispatch = useDispatch();
   // const { allCharacters } = useSelector((state) => state.allCharacters);
   const allCharacters = JSON.parse(localStorage.getItem('breakingBad'));
-  const [state, setState] = useState({
-    round: 20,
-  });
 
   const random = RandomCharacter(allCharacters);
   const [options, setOptions] = useState([random(), random(), random()]);
-  const [char, setChar] = useState(options[Math.floor(Math.random() * 3)].name);
+  const [character, setChar] = useState(options[Math.floor(Math.random() * 3)]);
+  const [result, setResult] = useState();
 
   const handleScore = (choice) => {
-    if (choice === char) {
-      console.log('Right');
-    } else {
-      console.log('Wrong');
-    }
+    const answer = choice === character.name ? 'Right' : 'Wrong';
+    setResult(answer);
   };
 
   const handleClick = (e) => {
     const choice = e.target.value;
-    setState({
-      round: state.round - 1,
-    });
-
     handleScore(choice);
     setOptions([random(), random(), random()]);
   };
 
   useEffect(() => {
     dispatch(fetchAllCharacters());
-    setChar(options[Math.floor(Math.random() * 3)].name);
+    setChar(options[Math.floor(Math.random() * 3)]);
   }, [handleClick]);
 
   return (
     <div>
-      <h1>Quiz</h1>
       <h2>WHO IS THIS CHARACTER?</h2>
+      <img src={character.img} alt="Who is this character?" />
       <p>
         {
-          char
+          result
         }
       </p>
       <button name="A" value={options[0].name} onClick={handleClick} type="button">{options[0].name}</button>

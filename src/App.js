@@ -4,12 +4,14 @@ import { Provider } from 'react-redux';
 import store from './app/store';
 import AllCharacters from './pages/allCharacters';
 import Quiz from './pages/quiz';
+import Header from './components/Header';
 
 function App() {
   return (
     <Provider store={store}>
       <div className="App d-flex flex-column vh-100">
         <Router>
+          <Header />
           <div className="flex-grow-1 position-relative">
             <Routes>
               <Route path="/" exact element={<Quiz />} />
