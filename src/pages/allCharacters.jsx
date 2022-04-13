@@ -11,7 +11,6 @@ import IconButton from '@mui/material/IconButton';
 import Typography from '@mui/material/Typography';
 import { red } from '@mui/material/colors';
 import FavoriteIcon from '@mui/icons-material/Favorite';
-import ShareIcon from '@mui/icons-material/Share';
 import MoreVertIcon from '@mui/icons-material/MoreVert';
 import { fetchAllCharacters } from '../slices/characters/all';
 
@@ -51,18 +50,17 @@ const allCharacters = () => {
               alt={character.name}
             />
             <CardContent>
-              <Typography variant="body2" color="text.secondary">
+              <Typography variant="body2" color="text.secondary" className="d-flex flex-wrap">
                 {character.occupation.map((job) => (
-                  <span className="m-1" key={job}>{job}</span>
+                  <span className="py-1 px-3 m-1 bg-light border rounded-pill" key={job}>
+                    {job}
+                  </span>
                 ))}
               </Typography>
             </CardContent>
             <CardActions disableSpacing>
               <IconButton aria-label="add to favorites">
                 <FavoriteIcon />
-              </IconButton>
-              <IconButton aria-label="share">
-                <ShareIcon />
               </IconButton>
             </CardActions>
           </Card>
