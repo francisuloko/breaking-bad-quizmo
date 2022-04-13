@@ -8,8 +8,8 @@ export default function Header() {
         <Container>
           <Navbar.Brand href="/">Breaking Bad Quizmo</Navbar.Brand>
           <Nav className="me-auto">
-            <Nav.Link href="/">Quiz</Nav.Link>
-            <Nav.Link href="/characters">Characters</Nav.Link>
+            <Nav.Link href="/quiz">Quiz</Nav.Link>
+            <Nav.Link href="/">Characters</Nav.Link>
           </Nav>
         </Container>
       </Navbar>
