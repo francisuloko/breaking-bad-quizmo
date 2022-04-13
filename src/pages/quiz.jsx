@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { useDispatch } from 'react-redux';
+import { Button, Container } from '@mui/material';
 import RandomCharacter from '../app/random';
 import { fetchAllCharacters } from '../slices/characters/all';
 
@@ -30,7 +31,7 @@ const Quiz = () => {
   }, [handleClick]);
 
   return (
-    <div>
+    <Container>
       <h2>WHO IS THIS CHARACTER?</h2>
       <img src={character.img} alt="Who is this character?" />
       <p>
@@ -38,10 +39,12 @@ const Quiz = () => {
           result
         }
       </p>
-      <button name="A" value={options[0].name} onClick={handleClick} type="button">{options[0].name}</button>
-      <button name="B" value={options[1].name} onClick={handleClick} type="button">{options[1].name}</button>
-      <button name="C" value={options[2].name} onClick={handleClick} type="button">{options[2].name}</button>
-    </div>
+      <Container>
+        <Button variant="contained" color="primary" value={options[0].name} onClick={handleClick} type="button">{options[0].name}</Button>
+        <Button variant="contained" color="primary" value={options[1].name} onClick={handleClick} type="button">{options[1].name}</Button>
+        <Button variant="contained" color="primary" value={options[2].name} onClick={handleClick} type="button">{options[2].name}</Button>
+      </Container>
+    </Container>
   );
 };
 
