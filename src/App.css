@@ -1,1 +1,15 @@
 /* TBA */
+.options button {
+  margin: 5px;
+}
+
+.character {
+  width: 400px;
+  height: 400px;
+  margin: 0 auto;
+}
+
+.character img {
+  width: 100%;
+  height: 100%;
+}
