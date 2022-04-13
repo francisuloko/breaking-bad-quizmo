@@ -1,70 +1,64 @@
-# Getting Started with Create React App
+# Breaking Bad Quizmo
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+> A fun app for Breaking Bad fans to know and test their knowledge of the characters.
 
-## Available Scripts
 
-In the project directory, you can run:
 
-### `npm start`
+![](./charactersScreenshot.png)
+![](./quizScreenshot.png)
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+ Breaking Bad fans and movie lovers can learn more about the characters of the movie and test their knowledge with the quiz functionality.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
 
-### `npm test`
+## Built With
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- React v17.0.2
+- Redux v4.1.2
+- react-bootstrap v1.7.2
+- react-router-dom v6.2.1
+- react-redux v7.2.6
+- Material UI/Icons
 
-### `npm run build`
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Getting Started
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+To get a local copy, run the following commands:
+```
+git clone https://github.com/francisuloko/breaking-bad-quizmo.git
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+cd breaking-bad-quiz
+```
 
-### `npm run eject`
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+To get started, run the following commands to get started:
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+```
+npm install
+npm start
+```
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## Authors
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+👤 **Francis Uloko**
 
-## Learn More
+- [Github](https://github.com/francisuloko)
+- [Twitter](https://twitter.com/francisuloko)
+- [LinkedIn](https://linkedin.com/in/francisuloko)
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## 🤝 Contributing
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+Contributions, issues and feature requests are welcome!
 
-### Code Splitting
+Feel free to check the [issues page](https://github.com/francisuloko/breaking-bad-quiz/issues).
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+## Show your support
 
-### Analyzing the Bundle Size
+Give a ⭐️ if you like this project!
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+## Acknowledgments
 
-### Making a Progressive Web App
+1. Inkredo
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+## 📝 License
 
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+This project is [MIT](https://mit-license.org) licensed.
