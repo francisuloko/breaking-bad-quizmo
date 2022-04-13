@@ -7,46 +7,49 @@ const Quiz = () => {
   const dispatch = useDispatch();
   // const { allCharacters } = useSelector((state) => state.allCharacters);
   const allCharacters = JSON.parse(localStorage.getItem('breakingBad'));
-
-  const random = RandomCharacter(allCharacters);
-  const [options, setOptions] = useState({
-    character: random(),
-    control: random(),
+  const [state, setState] = useState({
+    round: 20,
   });
 
-  useEffect(() => {
-    dispatch(fetchAllCharacters());
-  }, []);
+  const random = RandomCharacter(allCharacters);
+  const [options, setOptions] = useState([random(), random(), random()]);
+  const [char, setChar] = useState(options[Math.floor(Math.random() * 3)].name);
 
   const handleScore = (choice) => {
-    if (choice === options.character.name) {
-      console.log('Win');
+    if (choice === char) {
+      console.log('Right');
     } else {
-      console.log('Lose');
+      console.log('Wrong');
     }
   };
 
   const handleClick = (e) => {
     const choice = e.target.value;
-    console.log(choice, options.character.name);
-    handleScore(choice);
-    setOptions({
-      character: random(),
-      control: random(),
+    setState({
+      round: state.round - 1,
     });
+
+    handleScore(choice);
+    setOptions([random(), random(), random()]);
   };
+
+  useEffect(() => {
+    dispatch(fetchAllCharacters());
+    setChar(options[Math.floor(Math.random() * 3)].name);
+  }, [handleClick]);
 
   return (
     <div>
       <h1>Quiz</h1>
-      <h2>WHO IS THIS?</h2>
+      <h2>WHO IS THIS CHARACTER?</h2>
       <p>
         {
-          options.character.name
+          char
         }
       </p>
-      <button name="A" value={options.control.name} onClick={handleClick} type="button">{options.control.name}</button>
-      <button name="B" value={options.character.name} onClick={handleClick} type="button">{options.character.name}</button>
+      <button name="A" value={options[0].name} onClick={handleClick} type="button">{options[0].name}</button>
+      <button name="B" value={options[1].name} onClick={handleClick} type="button">{options[1].name}</button>
+      <button name="C" value={options[2].name} onClick={handleClick} type="button">{options[2].name}</button>
     </div>
   );
 };
