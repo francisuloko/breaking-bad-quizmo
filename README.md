@@ -37,6 +37,10 @@ npm install
 npm start
 ```
 
+## API ENDPOINT
+1. Base Url: `https://www.breakingbadapi.com/`
+2. Get Characters: `/api/characters/`
+
 ## Authors
 
 👤 **Francis Uloko**
@@ -58,6 +62,8 @@ Give a ⭐️ if you like this project!
 ## Acknowledgments
 
 1. Inkredo
+2. [Breaking Bad API](https://breakingbadapi.com/documentation)
+3. [Maerics](https://stackoverflow.com/a/17891411)
 
 ## 📝 License
 
