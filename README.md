@@ -9,6 +9,9 @@
 
  Breaking Bad fans and movie lovers can learn more about the characters of the movie and test their knowledge with the quiz functionality.
 
+ ## Live Demo
+ Preview this project [here](https://breaking-bad-quizmo.netlify.app/)
+
 
 ## Built With
 
@@ -18,7 +21,7 @@
 - react-router-dom v6.2.1
 - react-redux v7.2.6
 - Material UI/Icons
-
+- Netlify
 
 ## Getting Started
 
