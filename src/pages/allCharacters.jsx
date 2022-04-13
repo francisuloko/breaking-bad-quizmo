@@ -4,6 +4,7 @@ import { fetchAllCharacters } from '../slices/characters/all';
 
 const allCharacters = () => {
   const { allCharacters } = useSelector((state) => state.allCharacters);
+  // localStorage.setItem('breakingBad', JSON.stringify(allCharacters));
   const dispatch = useDispatch();
 
   useEffect(() => {
