@@ -1,17 +1,18 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
-import { Container } from '@mui/material';
+import { Container, Navbar, Nav } from 'react-bootstrap';
 
 export default function Header() {
   return (
-    <Container>
-      <h1>Breaking Bad Quizmo</h1>
-      <Link to="/">
-        Quiz
-      </Link>
-      <Link to="/characters">
-        Characters
-      </Link>
-    </Container>
+    <>
+      <Navbar bg="dark" variant="dark">
+        <Container>
+          <Navbar.Brand href="/">Breaking Bad Quizmo</Navbar.Brand>
+          <Nav className="me-auto">
+            <Nav.Link href="/">Quiz</Nav.Link>
+            <Nav.Link href="/characters">Characters</Nav.Link>
+          </Nav>
+        </Container>
+      </Navbar>
+    </>
   );
 }
