@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { Provider } from 'react-redux';
 import store from './app/store';
 import AllCharacters from './pages/allCharacters';
+import Quiz from './pages/quiz';
 
 function App() {
   return (
@@ -11,6 +12,7 @@ function App() {
         <Router>
           <div className="flex-grow-1 position-relative">
             <Routes>
+              <Route path="/" exact element={<Quiz />} />
               <Route path="/characters" exact element={<AllCharacters />} />
             </Routes>
           </div>
