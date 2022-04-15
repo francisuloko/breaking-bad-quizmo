@@ -7,7 +7,9 @@ import RandomCharacter from '../app/random';
 import { fetchAllCharacters } from '../slices/characters/all';
 
 const Quiz = () => {
-  const allCharacters = JSON.parse(localStorage.getItem('breakingBadCharacters'));
+  const allCharacters = JSON.parse(
+    localStorage.getItem('breakingBadCharacters'),
+  );
   const dispatch = useDispatch();
   const random = RandomCharacter(allCharacters);
   const [options, setOptions] = useState([random(), random(), random()]);
@@ -15,11 +17,13 @@ const Quiz = () => {
   const [result, setResult] = useState([]);
 
   const handleScore = (choice) => {
-    const answer = choice === character.name ? <CheckIcon htmlColor="green" /> : <CloseIcon htmlColor="red" />;
-    setResult([
-      ...result,
-      answer,
-    ]);
+    const answer = choice === character.name ? (
+      <CheckIcon htmlColor="green" />
+    ) : (
+      <CloseIcon htmlColor="red" />
+    );
+
+    setResult([...result, answer]);
   };
 
   const handleClick = (e) => {
@@ -39,15 +43,32 @@ const Quiz = () => {
       <div className="character">
         <img src={character.img} alt="Who is this character?" />
       </div>
-      <p className="m-0 p-2">
-        {
-          result
-        }
-      </p>
+      <p className="m-0 p-2">{result}</p>
       <Container className="options d-flex align-items-center justify-content-center">
-        <Button color="primary" value={options[0].name} onClick={handleClick} type="button">{options[0].name}</Button>
-        <Button color="primary" value={options[1].name} onClick={handleClick} type="button">{options[1].name}</Button>
-        <Button color="primary" value={options[2].name} onClick={handleClick} type="button">{options[2].name}</Button>
+        <Button
+          color="primary"
+          value={options[0].name}
+          onClick={handleClick}
+          type="button"
+        >
+          {options[0].name}
+        </Button>
+        <Button
+          color="primary"
+          value={options[1].name}
+          onClick={handleClick}
+          type="button"
+        >
+          {options[1].name}
+        </Button>
+        <Button
+          color="primary"
+          value={options[2].name}
+          onClick={handleClick}
+          type="button"
+        >
+          {options[2].name}
+        </Button>
       </Container>
     </Container>
   );
