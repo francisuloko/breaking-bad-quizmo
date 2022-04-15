@@ -25,9 +25,9 @@ const allCharacters = () => {
 
   return (
     <Container>
-      <div className="d-flex flex-wrap gap-3 align-items-center justify-content-evenly p-5">
+      <div className="d-flex flex-wrap gap-1 align-items-center justify-content-evenly p-5">
         {allCharacters.map((character) => (
-          <Card sx={{ maxWidth: 300 }} key={character.char_id}>
+          <Card sx={{ minWidth: 320, maxWidth: 300 }} key={character.char_id}>
             <CardHeader
               avatar={(
                 <Avatar sx={{ bgcolor: red[500] }} aria-label="recipe">
