@@ -1,10 +1,9 @@
-/* TBA */
 .options button {
   margin: 5px;
 }
 
 .character {
-  width: 400px;
+  max-width: 420px;
   height: 400px;
   margin: 0 auto;
 }
