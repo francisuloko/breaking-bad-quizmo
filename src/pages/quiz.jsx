@@ -37,7 +37,7 @@ const Quiz = () => {
     setChar(options[Math.floor(Math.random() * 3)]);
   }, [handleClick]);
 
-  const controls = options.map((option) => (
+  const optionsControl = options.map((option) => (
     <Button color="primary" value={option.name} onClick={handleClick} type="button" key={option.id}>
       {option.name}
     </Button>
@@ -51,7 +51,7 @@ const Quiz = () => {
       </div>
       <p className="m-0 p-2">{result}</p>
       <Container className="options d-flex align-items-center justify-content-center">
-        { controls }
+        { optionsControl }
       </Container>
     </Container>
   );
