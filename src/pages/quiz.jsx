@@ -37,6 +37,12 @@ const Quiz = () => {
     setChar(options[Math.floor(Math.random() * 3)]);
   }, [handleClick]);
 
+  const controls = options.map((option) => (
+    <Button color="primary" value={option.name} onClick={handleClick} type="button" key={option.id}>
+      {option.name}
+    </Button>
+  ));
+
   return (
     <Container className="text-center p-2">
       <h3>WHO IS THIS CHARACTER?</h3>
@@ -45,30 +51,7 @@ const Quiz = () => {
       </div>
       <p className="m-0 p-2">{result}</p>
       <Container className="options d-flex align-items-center justify-content-center">
-        <Button
-          color="primary"
-          value={options[0].name}
-          onClick={handleClick}
-          type="button"
-        >
-          {options[0].name}
-        </Button>
-        <Button
-          color="primary"
-          value={options[1].name}
-          onClick={handleClick}
-          type="button"
-        >
-          {options[1].name}
-        </Button>
-        <Button
-          color="primary"
-          value={options[2].name}
-          onClick={handleClick}
-          type="button"
-        >
-          {options[2].name}
-        </Button>
+        { controls }
       </Container>
     </Container>
   );
